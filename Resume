@@ -1,0 +1,276 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.6.4, 13 Nov 2021) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 package.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+% \colorlet{name}{black}
+% \colorlet{tagline}{PastelRed}
+\colorlet{heading}{VividPurple}
+\colorlet{headingrule}{VividPurple}
+% \colorlet{subheading}{PastelRed}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+\input{pubs-authoryear}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+% \input{pubs-num}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Hai Trinh}
+\tagline{Past — 98\textsuperscript{th} percentile gamer.\\
+Now — a human. Being.\\ 
+Future — Do. Or do not. There is no try.}
+% Cropped to square from https://www.overleaf.com/project/62a77e0ea49d67b644f21705/file/62b4e650faaad3af25713b47, CC-BY 2.0
+%% You can add multiple photos on the left or right
+\photoR{2.5cm}{ez}
+%\photoL{2cm}{Yacht_High,Suitcase_High}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{htrinh3@student.mtsac.edu}
+%   \phone{310-698-2718}
+  \location{San Diego, CA}
+  \homepage{310-698-2718}
+  \linkedin{hai-t-6768b5153}
+%   \github{github.com/mmayer} % I'm just making this up though.
+%   \orcid{0000-0000-0000-0000} % Obviously making this up too.
+  %% You can add your own arbitrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+	%%
+  %% For services and platforms like Mastodon where there isn't a
+  %% straightforward relation between the user ID/nickname and the hyperlink,
+  %% you can use \printinfo directly e.g.
+  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
+  %% But if you absolutely want to create new dedicated info fields for
+  %% such platforms, then use \NewInfoField* with a star:
+  % \NewInfoField*{mastodon}{\faMastodon}
+  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
+  %% the full hyperlink.
+  % \mastodon{@username@instance}{https://instance.url/@username}
+}
+
+\makecvheader
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{Experience}
+
+\cvevent{Volunteer Morgue Technician}{UCSD Medicine: Division of Medical Education}{Jun 2022 -- Current}{La Jolla, CA}
+\begin{itemize}
+\item Assists with postmortem examinations.
+\item Prepares burials, cremations, along with other laboratory duties.
+\end{itemize}
+
+\divider
+
+\cvevent{Emergency Medical Technician}{SDCCD EMT Program}{Feb 2022 -- May 2022}{San Diego, CA}
+\begin{itemize}
+\item Trained at Miramar College EMT Program.
+\item Volunteered at Scripps Chula Vista with strong recommendations.
+\item Fixed owies. 
+\end{itemize}
+
+\divider
+
+\cvevent{Psychiatric Assistant}{County Mental Hospital}{Jan 2022 -- Jan 2023}{San Diego, CA}
+
+\begin{itemize}
+\item Serve as eyes, ears, and first line of care for the 2\textsuperscript{nd} largest psychiatric hospital in California.
+\item Coordinate with treatment team: psychiatrists, registered nurses, therapists, social workers, judicial figures, and law enforcement.
+\item Observe and document 30 patients at 2-minute intervals.
+\end{itemize}
+
+\divider
+
+%\cvevent{SDCCD Miramar College EMT Program}{February 2022 -- May 20}{TBD, CA}
+%\begin{itemize}
+%\item Fixes owies
+%\item Trained at SDCCD Miramar College.
+%\item Volunteered at Scripps Chula Vista with strong recommendations.
+%\end{itemize}
+
+%\divider
+
+\cvevent{Substitute Teacher}{Chula Vista Elementary District}{Aug 2019 -- Mar 2022}{Chula Vista, CA}
+\begin{itemize}
+\item Guided and taught over 1,800 students, including 50+ with special
+ed and learning disability needs for 42 schools in both privileged and
+underrepresented neighborhoods.
+\item Subbed for California’s largest elementary school district, located on
+the Mexican border.
+\item Balanced order, boundaries, and tasks by creating firm but fun
+educational environments.
+
+
+
+
+\end{itemize}
+
+% \divider
+
+% \cvevent{Product Engineer}{Google}{23 June 1999 -- 2001}{Palo Alto, CA}
+
+% \begin{itemize}
+% \item Joined the company as employe \#20 and female employee \#1
+% \item Developed targeted advertisement in order to use user's search queries and show them related ads
+% \end{itemize}
+
+
+
+\cvsection{Publications}
+
+\nocite{*}
+
+\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Student Reviewer}},type=book]
+
+\cvsection{Languages}
+
+\cvskill{English}{5}
+% \divider
+
+\cvskill{Vietnamese}{4}
+% \divider
+
+\cvskill{French}{2.5} %% supports X.5 values.
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{Life Philosophy}
+\begin{quote}
+``Everyone you will ever meet knows something you don't'' -Bill Nye
+\end{quote}
+
+\cvsection{Most Proud of}
+
+\cvachievement{\faTrophy}{Competitive Video Game Rankings}{98\textsuperscript{th} percentile in Dota 2 and top 10k 
+in PUBG}
+
+\divider
+
+\cvachievement{\faChartLine}{GRE Scores} {98\textsuperscript{th} and 88\textsuperscript{th} percentile in Analytical Writing and Verbal Reasoning respective, with English as a 3rd language}
+
+\divider
+
+\cvachievement{\faHeartbeat}{Weight Lifting}{90\textsuperscript{th} percentile in squats}
+
+\cvsection{Skills}
+
+\cvtag{Gel Electrophoresis}
+\cvtag{ELISA}
+\cvtag{LaTeX}
+\cvtag{Western Blot}
+\cvtag{PCR}
+\cvtag{Protein Assay}
+\cvtag{Plasmid Isolation}
+\cvtag{Flow Cytometry}\\
+
+\cvtag{Cell Culture}
+\cvtag{Bacterial Transformation}
+\cvtag{Experience with standard lab equipment}\\
+\cvtag{Good Manufacturing Practices}
+\cvtag{QC}\\
+\cvtag{Meticulous Record Keeping}
+\cvtag{QA}
+
+
+
+
+
+\cvsection{Education}
+
+
+\cvevent{DoD: Applied Biotech I}{San Diego Miramar College}{Jun 2022 -- Aug 2022}{}
+
+\divider
+
+\cvevent{Postbacc Pre-med}{San Diego Community College District
+}{Jan 2020 -- May 2022}{}
+
+\divider
+
+
+\cvevent{Mental Health Work Certification}{San Diego City College}{Aug 2020 -- Dec 2021}{}
+
+\divider
+
+\cvevent{B.A. in Philosophy: Law}{Cal Poly Pomona}{Aug 2015 -- Aug 2017}{}
+
+\newpage
+
+\end{paracol}
+
+\end{document}
